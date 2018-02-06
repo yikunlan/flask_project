@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{%  block title%}{%  endblock%}</title>
+    <!--加载css文件-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+</head>
+<body>
+<div class="nav">
+    <ul>
+        <li><a href="{{ url_for('index') }}">首页</a></li>
+        <li><a href="{{ url_for('login') }}">登录</a></li>
+    </ul>
+</div>
+<!--这边相当于类名的父类的方法，在flask中必须定义这种方法让子类去实现，从而实现多态-->
+{%  block main%}{%  endblock%}
+
+</body>
+</html>

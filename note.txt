@@ -1,0 +1,9 @@
+一、设置debug的两种方式：
+1、直接在主python文件里面的书写：app.run(debug=True)；
+2、给flask设置配置文件：app.config.from_object(flask_config),其中flask_config为我们自己书写的python的配置文件，在里面书写：DEBUG = True，即可配置项目debug模式
+
+二、使用模板：在项目根目录下新建一个“templates”文件夹，然后把需要的HTML文件放入即可
+
+三、url链接：使用‘url_for(视图函数名称)’可以反装成url
+
+四、加载静态文件：看图加载静态文件.png
