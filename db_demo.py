@@ -23,7 +23,6 @@ def index():
     article = Article(title='第一条数据',content='插入第一条数据')
     db.session.add(article)
     db.session.commit()#事物提交
-    
     # 查
     #article = Article.query.filter(Article.title=='第一条数据').first()
     #print(article.content)
