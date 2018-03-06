@@ -6,7 +6,7 @@
 
 三、url链接：使用‘url_for(视图函数名称)’可以反装成url
 
-四、加载静态文件：看图加载静态文件.png
+四、加载静态文件：看图：加载静态文件.png
 
 五、安装mysql_python:windows的下载地址：https://pypi.python.org/pypi/MySQL-python/1.2.5，下载完之后解压，在mysql_python目录执行： python setup.py install
 python setup.py bdist_wininst
@@ -24,3 +24,22 @@ pip install mysqlclient (Windows)
 http://stackoverflow.com/questions/454854/no-module-named-mysqldb
 http://stackoverflow.com/questions/21440230/install-mysql-python-windows
 
+
+七、pip添加到环境变量中：D:\python3.6\Scripts
+
+八、安装flask_sqlalchemy:
+ 1、是一套ORM框架（Object Relationship Mapping),
+ 2、安装：pip install flask_sqlalchemy
+
+ 九、flask_sript:
+    1、作用是可以通过命令行的形式来操作Flask,
+    2、安装：pip install flask-script,
+    3、使用方法：在manager的目录中打开命令行，然后输入：python mananger.py xxxx,其中xxx为定义标记了manage.command的方法,
+    也可以在另外的文件里面写manager.command方法（方法名命名为：init），然后在manager.py 文件里面用manager.add_command('db',DBManger)的方法引入，在dos里面使用的方法为：
+    python manager.py db init.
+
+
+
+
+环境已经安装了model了但是项目中无法引入的话就把环境里面的model的整个文件夹拷贝到项目的model中，例如：把D:\python3.6\Lib\site-packages，中的flask_sqlalchemy拷贝
+到项目的：E:\work_space\python_workspace\flask_project\venv\Lib\site-packages文件夹中，这样项目也就引入了该model了
