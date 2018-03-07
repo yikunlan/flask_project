@@ -39,7 +39,18 @@ http://stackoverflow.com/questions/21440230/install-mysql-python-windows
     python manager.py db init.
 
 
+十、Flask_Migrate:
+    1、介绍；因为采用db.create_all 在后期修改字段的时候，不会自动的映射到数据库中，必须删除表，然后重新运行db.create_all
+    才会重新映射，这样不符合数据库的设计需求。因此flask_migrate就是为了解决这样的问题，他可以在每次修改模型后，可以将修改的东西
+    映射到数据库中
+    2、安装 :pip install flask-migrate
+    3、使用，配合flask-script使用，包：MigrateCommand中包含了所有和数据相关的命令。
+    4、命令:python manage.py db init:初始化一个迁移脚本的环境，只需要执行一次；python manage.py migrate:将模型生成迁移文件，
+    只要模型更改了，就需要执行一次这个命令；python manage.py db upgrade:将迁移文件真正的映射到数据库中，每次执行了migrate命令后
+    ，都需要去执行upgrade命令
 
+十一、flask的session是放在cookie中的，服务器获取session也是从客户端传过来的cookie中拿到session
+    1、使用session之前都需要设置24位字符的SECRET_KEY,实例：app.config['SECRET_KEY'] = os.urandom(24)
 
 环境已经安装了model了但是项目中无法引入的话就把环境里面的model的整个文件夹拷贝到项目的model中，例如：把D:\python3.6\Lib\site-packages，中的flask_sqlalchemy拷贝
 到项目的：E:\work_space\python_workspace\flask_project\venv\Lib\site-packages文件夹中，这样项目也就引入了该model了
