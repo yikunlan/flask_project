@@ -52,5 +52,17 @@ http://stackoverflow.com/questions/21440230/install-mysql-python-windows
 十一、flask的session是放在cookie中的，服务器获取session也是从客户端传过来的cookie中拿到session
     1、使用session之前都需要设置24位字符的SECRET_KEY,实例：app.config['SECRET_KEY'] = os.urandom(24)
 
-环境已经安装了model了但是项目中无法引入的话就把环境里面的model的整个文件夹拷贝到项目的model中，例如：把D:\python3.6\Lib\site-packages，中的flask_sqlalchemy拷贝
+十二、钩子函数（hook）
+    1、钩子函数有：before_request.  context_processor
+    2、作用：
+
+十三、环境已经安装了model了但是项目中无法引入的话就把环境里面的model的整个文件夹拷贝到项目的model中，例如：把D:\python3.6\Lib\site-packages，中的flask_sqlalchemy拷贝
 到项目的：E:\work_space\python_workspace\flask_project\venv\Lib\site-packages文件夹中，这样项目也就引入了该model了
+
+
+十四：虚拟环境：
+    1、安装虚拟环境：windows：pip install virtualenv
+    2、激活虚拟环境：进入到虚拟环境的scripts里面，然后执行：activate
+    3、退出虚拟环境：deactivate
+十五：装饰器：
+    @wraps
